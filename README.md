@@ -27,7 +27,7 @@ is_advanced = True
 
 ```
 
-In this code, we've defined a string, an integer, and a boolean. Printing them one by one is simple, but what about combining them?
+In this code, we've defined a string, an integer, and a boolean. Printing them one by one is straightforward, but what about combining them?
 
 **Here's an exercise:** Try to print a single, descriptive sentence using all three variables above, like this:
 
@@ -48,9 +48,10 @@ student_count = 35
 is_advanced = True
 
 message = ("The '" + course_name + "' course has " + 
-           str(student_count) + 
-           " students and its advanced status is " + 
-           str(is_advanced) + ".")
+            str(student_count) + 
+            " students and its advanced status is " + 
+            str(is_advanced) + "."
+          )
 
 print(message)
 
@@ -69,7 +70,7 @@ This code works, but it's a pain to write and even harder to read.
 
 ### Introducing: f-Strings (Formatted String Literals)
 
-This is the problem f-strings were designed to solve. They provide a clean, concise, and efficient way to embed Python expressions directly inside a string.
+To solve this problem, f-strings were introduced in Python 3.6. They provide a clean, concise, and efficient way to embed Python expressions directly inside a string.
 
 Let's rewrite our example using an f-string:
 
@@ -86,7 +87,7 @@ print(message)
 ```
 
 The output is identical, but the code is far superior. To use f-strings, you:
-1) Place an **`f`** before the opening quote `'`, then
+1) Place an **`f`** before the opening quote `"`, then
 1) Use curly braces `{}` to plug your variables right where they belong. 
 
 From the Python docs:
@@ -105,7 +106,7 @@ For example:
 
 ```python
 num = 2
-print(f'The square of {num} is {num**2}')
+print(f"The square of {num} is {num**2}")
 ```
 
 Be sure not to overdo it though! Remember, code readability matters.
@@ -114,7 +115,7 @@ Be sure not to overdo it though! Remember, code readability matters.
 
 ```python
 # Hard to read!
-print(f'Final score: { (some_value * other_value) / my_func(my_list) + offset }')
+print(f"Final score: { (some_value * other_value) / my_func(my_list) + offset }")
 
 ```
 
@@ -124,19 +125,19 @@ We will end with a little known use-case of f-strings.
 This is one of the best features for debugging. If you add an equals sign (`=`) at the end of your expression, the f-string will print the expression itself _and_ its value.
 
 ```python
-bugs = 'roaches'
+bugs = "roaches"
 count = 13
-area = 'living room'
+area = "living room"
 
 # Using the = specifier for debugging
-print(f'{bugs=} {count=} {area=}')
+print(f"{bugs=} {count=} {area=}")
 
 ```
 
-This saves you from typing `print(f'bugs = {bugs}')`. 
+This saves you from typing `print(f"bugs = {bugs}")`. 
 The output:
 
- ` bugs='roaches' count=13 area='living room'` 
+ ` bugs="roaches" count=13 area="living room"` 
 
 tells you everything you need to know.
 
