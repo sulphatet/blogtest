@@ -96,7 +96,7 @@ From the Python docs:
 
 ----------
 
-### The Real Power: Expressions and Format Specifiers
+### The Real Power: Expressions and Debugging
 
 The curly braces `{}` in an f-string can hold **any valid Python expression**. This unlocks a whole new level of formatting power.
 
